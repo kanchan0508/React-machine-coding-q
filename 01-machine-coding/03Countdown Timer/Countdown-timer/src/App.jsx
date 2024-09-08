@@ -48,7 +48,7 @@ function App() {
   
   const startTimer = () => {
     if (hour === 0 && minute === 0 && second === 0) return;
-    setIsRunning(true);
+    setIsRunning(!isRunning);
   };
 
   const resetTimer = () => {
