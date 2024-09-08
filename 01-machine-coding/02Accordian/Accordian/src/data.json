@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "question": "What is React?",
+      "answer": "React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and efficiently update and render those components based on changing data."
+    },
+    {
+      "id": 2,
+      "question": "What are components in React?",
+      "answer": "Components are the building blocks of a React application. They are reusable, independent pieces of code that represent parts of the user interface. A component can be a class or a function."
+    },
+    {
+      "id": 3,
+      "question": "What is JSX?",
+      "answer": "JSX stands for JavaScript XML. It is a syntax extension for JavaScript that looks similar to HTML. JSX allows developers to write HTML elements in JavaScript and place them in the DOM without using `createElement()` or `appendChild()` methods."
+    },
+    {
+      "id": 4,
+      "question": "What is the Virtual DOM?",
+      "answer": "The Virtual DOM is an in-memory representation of the real DOM elements. When the state of an object changes in React, the virtual DOM is updated first instead of directly manipulating the real DOM. React compares the new virtual DOM with the previous one and applies only the necessary changes to the real DOM, making updates more efficient."
+    },
+    {
+      "id": 5,
+      "question": "What is the difference between state and props?",
+      "answer": "Props are used to pass data from one component to another, while state is a local data storage that is specific to a component and can be used to keep track of changes within that component. Props are immutable, whereas the state is mutable."
+    },
+    {
+      "id": 6,
+      "question": "What is a React Hook?",
+      "answer": "Hooks are special functions that let you use state and other React features in functional components. Some common hooks include `useState`, `useEffect`, and `useContext`."
+    },
+    {
+      "id": 7,
+      "question": "What is useEffect used for?",
+      "answer": "`useEffect` is a React hook used to handle side effects in functional components. It is called after the render process and is useful for tasks such as data fetching, subscribing to events, or manually updating the DOM."
+    },
+    {
+      "id": 8,
+      "question": "What is the difference between controlled and uncontrolled components?",
+      "answer": "A controlled component in React is a component that is controlled by React state, meaning the form data is handled by the React component's state. An uncontrolled component, on the other hand, allows the DOM to handle its own state and the form data is controlled by the DOM itself."
+    },
+    {
+      "id": 9,
+      "question": "What is the use of keys in React?",
+      "answer": "Keys are used in React to uniquely identify elements in lists. They help React keep track of which items have changed, are added, or are removed, making rendering more efficient when dealing with dynamic lists."
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of React Router?",
+      "answer": "React Router is a standard library for routing in React. It enables the navigation between different views of a React application, allows browser URL updates, and keeps the UI in sync with the URL."
+    }
+  ]
+  
