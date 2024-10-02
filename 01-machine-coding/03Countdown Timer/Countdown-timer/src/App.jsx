@@ -1,7 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
 function App() {
   const [hour, setHour] = useState(0);
   const [minute, setMinute] = useState(0);
@@ -10,24 +7,24 @@ function App() {
   const [countdownTimer, setCountdownTimer] = useState(null);
 
 
-  useEffect(()=>{
+  useEffect(() => {
     if (isRunning && (hour > 0 || minute > 0 || second > 0)) {
       const timer = setInterval(() => {
         updateTimer();
       }, 1000);
       setCountdownTimer(timer);
-      return () => clearInterval(timer); 
+      return () => clearInterval(timer);
     } else if (!isRunning) {
       clearInterval(countdownTimer);
     }
   }, [isRunning, hour, minute, second]);
 
-  const updateTimer = () =>{
-     if(second > 60) {
-      setMinute((prev)=> prev + 1)
+  const updateTimer = () => {
+    if (second > 60) {
+      setMinute((prev) => prev + 1)
       setSecond((prev) => prev - 59);
-     }
-     
+    }
+
     if (minute > 60) {
       setHour((prev) => prev + 1);
       setMinute((prev) => prev - 60);
@@ -45,13 +42,14 @@ function App() {
       setHour((prev) => prev - 1);
     }
   };
-  
+
   const startTimer = () => {
     if (hour === 0 && minute === 0 && second === 0) return;
     setIsRunning(!isRunning);
   };
 
   const resetTimer = () => {
+
     setIsRunning(false);
     setHour(0);
     setMinute(0);
@@ -68,29 +66,29 @@ function App() {
           <span>Seconds</span>
         </div>
         <div className='flex justify-between mt-[5%] w-[38%] text-xl ml-10'>
-        <input
-          type="number"
-      className='w-10'
-          value={hour}
-          onChange={(e) => setHour(e.target.value)}
-        />
-        <input
-          type="number"
-          className='w-10'
-          value={minute}
-          onChange={(e) => setMinute(e.target.value)}
-        />
-        <input
-          type="number"
-    className='w-10'
-          value={second}
-          onChange={(e) => setSecond(e.target.value)}
-        />
+          <input
+            type="number"
+            className='w-10'
+            value={hour}
+            onChange={(e) => setHour(e.target.value)}
+          />
+          <input
+            type="number"
+            className='w-10'
+            value={minute}
+            onChange={(e) => setMinute(e.target.value)}
+          />
+          <input
+            type="number"
+            className='w-10'
+            value={second}
+            onChange={(e) => setSecond(e.target.value)}
+          />
 
         </div>
         <div className='flex justify-between w-[30%] mt-[5%] ml-[8%]'>
           <button className='w-[80%]  mr-5 rounded-lg p-2 text-white bg-green-700' onClick={startTimer} > {isRunning ? "Pause" : "Start"}</button>
-          <button  className='w-[80%] mr-5 rounded-lg p-2 text-white bg-orange-700' onClick={resetTimer}>Reset</button>
+          <button className='w-[80%] mr-5 rounded-lg p-2 text-white bg-orange-700' onClick={resetTimer}>Reset</button>
         </div>
       </div>
 
