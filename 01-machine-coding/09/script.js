@@ -127,3 +127,4 @@ function getChangeString(changeDue, cid) {
 
     return "CLOSED " + changeArr.join(" ");
 }
+document.getElementById('cancel').addEventListener('click',()=>{})
